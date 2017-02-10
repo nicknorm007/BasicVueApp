@@ -1,15 +1,25 @@
 <template>
   <div id="app">
-    {{msg}}
+    <div class="content" align="center">
+      <h1>{{msg}}</h1>
+    </div>
+    </br>
+    <simple-env></simple-env>
   </div>
 </template>
 
 <script>
+
+import SimpleEnv from './simple-env.vue';
+
 export default {
   name: 'app',
+  components: {
+    SimpleEnv
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Authoring Environment Information'
     }
   }
 }
