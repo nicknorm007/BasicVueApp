@@ -19,7 +19,7 @@ export default {
   },
   data () {
     return {
-      msg: 'Authoring Environment Information'
+      msg: 'CA Authoring Environment Information'
     }
   }
 }
