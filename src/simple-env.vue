@@ -8,7 +8,7 @@
   </div>
   </br>
   </br>
-  <div class="box">
+  <div class="results">
     <table class="table is-bordered is-striped is-narrow">
       <thead>
         <tr>
@@ -22,7 +22,7 @@
       </thead>
         <tbody>
           <tr>
-            <td>sha</td>
+            <td>{{ envInfo.sha }}</td>
             <td>build</td>
             <td>branch</td>
             <td>version</td>
@@ -57,6 +57,7 @@
         axios.get(url)
           .then(response => {
             let data = response.data;
+            this.envInfo['sha'] = data['git']['sha'];
           })
           .catch(error => {
             console.log(error);
